@@ -6,40 +6,46 @@
             height: 100px;
             width: 100px;
         }
+        .numericbutton-full {
+            height: 100px;
+            width: 100%;
+        }
     </style>
     <script>
-function numericbuttonclicked(e){
-    console.log('Button Clicked');
-    console.log(e.innerText);
-    var box = document.getElementById("resultarea");
-    box.innerText = box.innerHTML + e.innerText;
-}
+        function numericbuttonclicked(e) {
+            console.log('Button Clicked');
+            console.log(e.innerText);
+            var box = document.getElementById("resultarea");
+            box.innerText = box.innerHTML + e.innerText;
+        }
     </script>
 </head>
 
 <body>
     <div>
         <div>
-            <textarea id="resultarea" rows="2"  style="width:312px;height:100px;resize: none;"> </textarea>
+            <textarea id="resultarea" rows="2" style="width:312px;height:100px;resize: none;"> </textarea>
         </div>
         <div>
             <table>
                 <tr>
                     <td><button class="numericbutton" onclick="numericbuttonclicked(this)">1 </button></td>
-                     <td><button class="numericbutton" onclick="numericbuttonclicked(this)">2<br/>ABC</button></td> 
-                     <td><button class="numericbutton" onclick="numericbuttonclicked(this)">3<br/>DEF</button></td>
+                    <td><button class="numericbutton" onclick="numericbuttonclicked(this)">2<br/>ABC</button></td>
+                    <td><button class="numericbutton" onclick="numericbuttonclicked(this)">3<br/>DEF</button></td>
                 </tr>
                 <tr>
                     <td><button class="numericbutton" onclick="numericbuttonclicked(this)">4<br/>GHI</button></td>
-                     <td><button class="numericbutton" onclick="numericbuttonclicked(this)">5<br/>JKL</button></td> 
-                     <td><button class="numericbutton" onclick="numericbuttonclicked(this)">6<br/>MNO</button></td>
+                    <td><button class="numericbutton" onclick="numericbuttonclicked(this)">5<br/>JKL</button></td>
+                    <td><button class="numericbutton" onclick="numericbuttonclicked(this)">6<br/>MNO</button></td>
                 </tr>
                 <tr>
-                     <td><button class="numericbutton" onclick="numericbuttonclicked(this)">7<br/>PQRS</button></td>
-                     <td><button class="numericbutton" onclick="numericbuttonclicked(this)">8<br/>TUV</button></td> 
-                     <td><button class="numericbutton" onclick="numericbuttonclicked(this)">9<br/>WXYZ</button></td>
+                    <td><button class="numericbutton" onclick="numericbuttonclicked(this)">7<br/>PQRS</button></td>
+                    <td><button class="numericbutton" onclick="numericbuttonclicked(this)">8<br/>TUV</button></td>
+                    <td><button class="numericbutton" onclick="numericbuttonclicked(this)">9<br/>WXYZ</button></td>
                 </tr>
-
+                <tr>
+                    <td colspan="3"><button class="numericbutton-full" onclick="numericbuttonclicked(this)">SPACE</button></td>
+                </tr>
             </table>
         </div>
         <div>
